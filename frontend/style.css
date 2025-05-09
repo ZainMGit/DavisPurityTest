@@ -1,0 +1,197 @@
+
+body {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #b3a369;
+  background-color: #002855;
+  background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.wrapper {
+  max-width: calc(60vw + 100px);
+  margin: 0px auto;
+}
+.container {
+  margin: 50px auto;
+  margin-top: 0;
+  background-color: white;
+  padding: 30px;
+  border-radius: 0px 0px 8px 8px;
+  box-shadow: 0 0 50px rgb(2, 2, 2);
+}
+.header { 
+  background-color: #ddd;
+  margin: 0px auto;
+  margin-top: 50px;        /* Light gray */
+  padding: 30px 20px;         /* Top & side padding */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+}
+h1 {
+  margin: 0;
+  color: #002855; 
+  font-size: 4vw;
+  padding: 6px;
+}
+.question {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  border-bottom: 1px solid #ccc;
+}
+.submit-btn {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 25px;
+  font-size: 18px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background-color: #005fa3;
+}
+.result {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+img {
+    width: 30vh;
+    height: 30vh;
+    
+    animation: spin 1s linear;
+}
+
+.animation_opener {
+    background-color: #002855;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fix to the screen */
+    top: 0;
+    left: 0;
+    z-index: 9999; /* Stay on top */
+    animation: fadeOut 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+li:hover {
+  background-color: #f0f4f8; 
+  cursor: pointer;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeOut {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  @keyframes floatUpDown {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px); /* Moves up */
+    }
+    100% {
+      transform: translateY(0px); /* Back to original */
+    }
+  }
+
+  .progress-container {
+    height: 5px;
+    width: 60%;
+    background: #ddd;
+    z-index: 9999;
+    border: 10px;
+    border-radius: 15px;
+    text-align: center;
+  }
+  
+  .progress-bar {
+    height:  calc(0.8vw + 5px);
+    width: 6vw;
+    background: linear-gradient(to right, #eddeb0, #FFBF00);;
+    transition: width 0.1s ease-out;
+    border-radius: 15px;
+  }
+  
+  .content {
+    height: 3000px; /* For demonstration */
+  }
+  .progress-container h2 {
+    font-size: 2vw;
+  
+  }
+
+  .user-count-text {
+    font-size: 12px;
+    color: rgb(128, 127, 127);
+    text-align: center;
+  }
+  .score-box {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: #e0f7fa;
+    color: #004d61;
+    width: 60%;
+    margin: 20px auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .progress-wrapper {
+    width: 100%;
+    max-width: 350px;
+    margin: 15px auto 0 auto;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 20px;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    background-color: #B3A369;
+    width: 0%;
+    transition: width 0.7s ease-in-out;
+    border-radius: 15px;
+  }
+  
+  
+  
+  #loadingImage {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 20px auto;
+    animation: spin 1.2s linear infinite;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
