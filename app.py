@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from pymongo import MongoClient
@@ -11,10 +12,11 @@ mongo_uri = "mongodb+srv://zain:davispuritytest@davispuritytest.xdnj7kj.mongodb.
 from pymongo import MongoClient
 
 client = MongoClient(
-    "mongodb+srv://zain:davispuritytest@davispuritytest.xdnj7kj.mongodb.net/?retryWrites=true&w=majority&appName=DavisPurityTest",  # replace this with your actual Mongo URI
+    os.environ.get("MONGO_URI"),
     tls=True,
-    tlsCAFile="C:/Program Files/SSL/cacert.pem"
+    tlsAllowInvalidCertificates=True  # This bypasses the CA check
 )
+
 
 db = client.purityDB
 scores = db.scores
