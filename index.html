@@ -1,209 +1,271 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Davis Purity Test</title>
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
   <meta name="description" content="Take the UC Davis-themed Rice Purity Test and see how many Aggie experiences you've had!" />
-  
+
+
   <!--Google AdSense Verification Script -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9777771799406691"
   crossorigin="anonymous"></script>
-  
-  
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9M6BYLFVZC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-9M6BYLFVZC');
-</script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="small_cow.png" type="image/x-icon">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 800px;
-      margin: 50px auto;
-      background-color: white;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      text-align: center;
-      color: #004c99;
-    }
-    .question {
-      margin: 15px 0;
-    }
-    .submit-btn {
-      display: block;
-      margin: 30px auto;
-      padding: 10px 25px;
-      font-size: 18px;
-      background-color: #0077cc;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .submit-btn:hover {
-      background-color: #005fa3;
-    }
-    .result {
-      text-align: center;
-      font-size: 22px;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
-  <div style="text-align:center; padding-top: 15px; font-size: 14px;">
-    <a href="https://github.com/ZainMGit" target="_blank">GitHub Page</a>
-  </div>
-  <div class="container">
-    <div style="font-size: 14px; text-align: center; margin-bottom: 20px; color: #666;">
-        <strong>Disclaimer:</strong> This quiz is not affiliated with UC Davis in any way. It is intended purely for entertainment purposes and is not meant to serve as a checklist or endorsement of behavior.
-      </div>
-    <h1>Davis Purity Test</h1>
-    <form id="purityForm">
-<ol type="1" style="list-style: decimal inside; padding-left: 0;">
-      <!-- Start Questions -->
-      <li class="question"><input type="checkbox" /> Attended Picnic Day drunk</li>
-      <li class="question"><input type="checkbox" /> Biked without a helmet on campus</li>
-      <li class="question"><input type="checkbox" /> Stayed overnight at Shields Library</li>
-      <li class="question"><input type="checkbox" /> Swam in Putah Creek</li>
-      <li class="question"><input type="checkbox" /> Seen a cow give birth at the dairy barn</li>
-      <li class="question"><input type="checkbox" /> Pulled an all-nighter in the library</li>
-      <li class="question"><input type="checkbox" /> Bought food from the Silo</li>
-      <li class="question"><input type="checkbox" /> Got stuck behind a tractor on campus</li>
-      <li class="question"><input type="checkbox" /> Seen a protest in front of the library/MU</li>
-      <li class="question"><input type="checkbox" /> Been stopped by campus police</li>
-      <li class="question"><input type="checkbox" /> Taken a nap in the Arboretum</li>
-      <li class="question"><input type="checkbox" /> Failed a midterm but aced the class</li>
-      <li class="question"><input type="checkbox" /> Regretted going out during the weekend</li>
-      <li class="question"><input type="checkbox" /> Took a selfie with the Egghead statues</li>
-      <li class="question"><input type="checkbox" /> Submitted an assignment at 11:59 pm</li>
-      <li class="question"><input type="checkbox" /> Forgot where you locked your bike</li>
-      <li class="question"><input type="checkbox" /> Went on a date in the Arboretum</li>
-      <li class="question"><input type="checkbox" /> Seen a unicycle on campus</li>
-      <li class="question"><input type="checkbox" /> Taken a picture with Gunrock</li>
-      <li class="question"><input type="checkbox" /> Seen a goose chase someone</li>
-      <!-- 21 -->
-      <li class="question"><input type="checkbox" /> Got a free coffee from CoHo</li>
-      <li class="question"><input type="checkbox" /> Climbed the MU roof (or tried to)</li>
-      <li class="question"><input type="checkbox" /> Slept through a final or midterm</li>
-      <li class="question"><input type="checkbox" /> Crashed while riding your bike on campus</li>
-      <li class="question"><input type="checkbox" /> Prayed for a curve on a final</li>
-      <li class="question"><input type="checkbox" /> Took an elevator to get to the second floor</li>
-      <li class="question"><input type="checkbox" /> Been drenched biking in the rain</li>
-      <li class="question"><input type="checkbox" /> Skipped an 8 am class</li>
-      <li class="question"><input type="checkbox" /> Waited in line for Mongolian BBQ at the DC</li>
-      <li class="question"><input type="checkbox" /> Went to a club event for free food</li>
-      <li class="question"><input type="checkbox" /> Been locked out of your dorm/apartment</li>
-      <li class="question"><input type="checkbox" /> Got lost in the Death Star (Social Sciences Lecture Hall)</li>
-      <li class="question"><input type="checkbox" /> Watched squirrels steal food on the Quad</li>
-      <li class="question"><input type="checkbox" /> Got hit by a rogue frisbee</li>
-      <li class="question"><input type="checkbox" /> Been on academic probation</li>
-      <li class="question"><input type="checkbox" /> Took a photo at the UC Davis sign</li>
-      <li class="question"><input type="checkbox" /> Had back to back midterms/finals</li>
-      <li class="question"><input type="checkbox" /> Got a flat tire biking</li>
-      <li class="question"><input type="checkbox" /> Changed a class to pass/fail after the midterm</li>
-      <li class="question"><input type="checkbox" /> Lost your AggieCard</li>
-      <li class="question"><input type="checkbox" /> Had your major advisor give bad advice</li>
-      <li class="question"><input type="checkbox" /> Joined a class discord server</li>
-      <li class="question"><input type="checkbox" /> Tried to sneak a friend into the ARC</li>
-      <li class="question"><input type="checkbox" /> Had to sit on the floor during a lecture</li>
-      <li class="question"><input type="checkbox" /> Rode Unitrans double-decker bus</li>
-      <li class="question"><input type="checkbox" /> Rode a SPIN scooter on campus</li>
-      <li class="question"><input type="checkbox" /> Forgot your calculator for an exam</li>
-      <li class="question"><input type="checkbox" /> Pet Cheeto before</li>
-      <li class="question"><input type="checkbox" /> Got parking ticket on campus</li>
-      <li class="question"><input type="checkbox" /> Seen Turkeys walking on campus</li>
-      <li class="question"><input type="checkbox" /> Attended lecture while drunk or high</li>
-<li class="question"><input type="checkbox" /> Got lost trying to find your classroom in Social Sciences</li>
-<li class="question"><input type="checkbox" /> Fallen asleep in a lecture hall</li>
-<li class="question"><input type="checkbox" /> Ate Shah's Halal Food</li>
-<li class="question"><input type="checkbox" /> Scrolled Reels/Tiktok during a lecture</li>
-<li class="question"><input type="checkbox" /> Slept in a hammock on campus</li>
-<li class="question"><input type="checkbox" /> Went to a frat party</li>
-<li class="question"><input type="checkbox" /> Eaten at In-N-Out after midnight</li>
-<li class="question"><input type="checkbox" /> Ridden Amtrak to Sacramento or the Bay Area</li>
-<li class="question"><input type="checkbox" /> Forgot to bring a scantron to an exam</li>
-<li class="question"><input type="checkbox" /> Cried after/during a midterm or final</li>
-<li class="question"><input type="checkbox" /> Missed your bus and had to bike instead</li>
-<li class="question"><input type="checkbox" /> Regretted your DoorDash order after you finished eating</li>
-<li class="question"><input type="checkbox" /> Played with therapy dogs during finals week</li>
-<li class="question"><input type="checkbox" /> Created a perfect schedule on schedule builder only for the classes to get full</li>
-<li class="question"><input type="checkbox" /> Complained about something on YikYak</li>
-<li class="question"><input type="checkbox" /> Gotten sunburned at a Picnic Day event</li>
-<li class="question"><input type="checkbox" /> Blacked out at a party</li>
-<li class="question"><input type="checkbox" /> Completed the lecture attendance iClicker/Quiz from home</li>
-<li class="question"><input type="checkbox" /> Ate at the Dining Commons just for dessert</li>
-<li class="question"><input type="checkbox" /> Lost your bike lock key</li>
-<li class="question"><input type="checkbox" /> Asked someone where they're from and they say: "The Bay"</li>
-<li class="question"><input type="checkbox" /> Got drenched from sprinklers on campus</li>
-<li class="question"><input type="checkbox" /> Gotten your bike stolen</li>
-<li class="question"><input type="checkbox" /> Took a nap in the Quad</li>
-<li class="question"><input type="checkbox" /> Begged the professor to get off the waitlist for a class</li>
-<li class="question"><input type="checkbox" /> Seen a raccoon or skunk on campus</li>
-<li class="question"><input type="checkbox" /> Went to a UCDavis football game</li>
-<li class="question"><input type="checkbox" /> Had class in a building that was way too hot or cold</li>
-<li class="question"><input type="checkbox" /> Attended lecture for the last 5 minutes to get the iClicker</li> 
-<!-- 81 -->
-<li class="question"><input type="checkbox" /> Been the only person in the group project to do work</li>
-<li class="question"><input type="checkbox" /> Used ChatGPT to study</li>
-<li class="question"><input type="checkbox" /> Gotten a milkshake from the Tecero, Segundo, or Latitude market</li>
-<li class="question"><input type="checkbox" /> Pulled an all-nighter during finals week</li>
-<li class="question"><input type="checkbox" /> Got rejected from a club on campus</li>
-<li class="question"><input type="checkbox" /> Accidentally went to the wrong class/lecture</li>
-<li class="question"><input type="checkbox" /> Bought bluebooks and scantrons at the Bookstore</li>
-<li class="question"><input type="checkbox" /> Had a class canceled</li>
-<li class="question"><input type="checkbox" /> Asked a professor to round your grade</li>
-<li class="question"><input type="checkbox" /> Had to stand on the Unitrans bus</li>
-<li class="question"><input type="checkbox" /> Dropped a class after the first lecture</li>
-<li class="question"><input type="checkbox" /> Bought UC Davis merch from the giftshop</li>
-<li class="question"><input type="checkbox" /> Spent Aggie Cash too quickly</li>
-<li class="question"><input type="checkbox" /> Joined a club and left after one meeting</li> 
-<li class="question"><input type="checkbox" /> Had a terrible schedule builder passtime</li>
-<li class="question"><input type="checkbox" /> Spilled coffee on your notes before an exam</li>
-<li class="question"><input type="checkbox" /> Went to a campus event only for the free merch</li>
-<li class="question"><input type="checkbox" /> Looked at RateMyProfessor right after taking a midterm/final</li>
-<li class="question"><input type="checkbox" /> Laughed during a silent lecture</li>
-<li class="question"><input type="checkbox" /> Taken a gap quarter/year</li>
-
-
-  </ol>
-
-
-
-
-  <button type="button" class="submit-btn" onclick="calculatePurity()">Submit</button>
-</form>
-<div class="result" id="result"></li>
-
-
-  </li>
-
+  <!--Google tag-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9M6BYLFVZC"></script>
   <script>
-    function calculatePurity() {
-      const totalQuestions = document.querySelectorAll('#purityForm input[type="checkbox"]').length;
-      const checked = document.querySelectorAll('#purityForm input[type="checkbox"]:checked').length;
-      const purityScore = 100 - Math.round((checked / totalQuestions) * 100);
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-      document.getElementById('result').textContent = `Your Aggie Purity Score: ${purityScore}`;
-    }
+    gtag('config', 'G-9M6BYLFVZC');
   </script>
 
+</head>
+
+<body>
+
+  <div class="animation_opener">
+    <img src="small_cow.png"></img>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.body.style.overflow = 'auto'; // Enable scrolling
+      document.querySelector('.overlay').classList.add('fade-complete');
+    }, 1000); 
+  </script>
+
+<div class="wrapper">
+<div class = "header"><h1>Davis Purity Test</h1>
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div></div>
+
+  <script>window.onscroll = function () {
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercent = (scrollTop / scrollHeight) * 100;
+  
+    document.getElementById("progressBar").style.width = scrollPercent + "%";
+  };
+  </script>
+  <div class="container">
+
+    <form id="purityForm">
+      <ol type="1" style="list-style: decimal inside; padding-left: 0;">
+        <!-- Start Questions -->
+        <li class="question"><input type="checkbox" /> Attended Picnic Day drunk</li>
+        <li class="question"><input type="checkbox" /> Biked without a helmet on campus</li>
+        <li class="question"><input type="checkbox" /> Stayed overnight at Shields Library</li>
+        <li class="question"><input type="checkbox" /> Swam in Putah Creek</li>
+        <li class="question"><input type="checkbox" /> Seen a cow give birth at the dairy barn</li>
+        <li class="question"><input type="checkbox" /> Pulled an all-nighter in the library</li>
+        <li class="question"><input type="checkbox" /> Bought food from the Silo</li>
+        <li class="question"><input type="checkbox" /> Got stuck behind a tractor on campus</li>
+        <li class="question"><input type="checkbox" /> Seen a protest in front of the library/MU</li>
+        <li class="question"><input type="checkbox" /> Been stopped by campus police</li>
+        <li class="question"><input type="checkbox" /> Taken a nap in the Arboretum</li>
+        <li class="question"><input type="checkbox" /> Failed a midterm but aced the class</li>
+        <li class="question"><input type="checkbox" /> Regretted going out during the weekend</li>
+        <li class="question"><input type="checkbox" /> Took a selfie with the Egghead statues</li>
+        <li class="question"><input type="checkbox" /> Submitted an assignment at 11:59 pm</li>
+        <li class="question"><input type="checkbox" /> Forgot where you locked your bike</li>
+        <li class="question"><input type="checkbox" /> Went on a date in the Arboretum</li>
+        <li class="question"><input type="checkbox" /> Seen a unicycle on campus</li>
+        <li class="question"><input type="checkbox" /> Taken a picture with Gunrock</li>
+        <li class="question"><input type="checkbox" /> Seen a goose chase someone</li>
+        <!-- 21 -->
+        <li class="question"><input type="checkbox" /> Got a free coffee from CoHo</li>
+        <li class="question"><input type="checkbox" /> Climbed the MU roof (or tried to)</li>
+        <li class="question"><input type="checkbox" /> Slept through a final or midterm</li>
+        <li class="question"><input type="checkbox" /> Crashed while riding your bike on campus</li>
+        <li class="question"><input type="checkbox" /> Prayed for a curve on a final</li>
+        <li class="question"><input type="checkbox" /> Took an elevator to get to the second floor</li>
+        <li class="question"><input type="checkbox" /> Been drenched biking in the rain</li>
+        <li class="question"><input type="checkbox" /> Skipped an 8 am class</li>
+        <li class="question"><input type="checkbox" /> Waited in line for Mongolian BBQ at the DC</li>
+        <li class="question"><input type="checkbox" /> Went to a club event for free food</li>
+        <li class="question"><input type="checkbox" /> Been locked out of your dorm/apartment</li>
+        <li class="question"><input type="checkbox" /> Got lost in the Death Star (Social Sciences Lecture Hall)</li>
+        <li class="question"><input type="checkbox" /> Watched squirrels steal food on the Quad</li>
+        <li class="question"><input type="checkbox" /> Got hit by a rogue frisbee</li>
+        <li class="question"><input type="checkbox" /> Been on academic probation</li>
+        <li class="question"><input type="checkbox" /> Took a photo at the UC Davis sign</li>
+        <li class="question"><input type="checkbox" /> Had back to back midterms/finals</li>
+        <li class="question"><input type="checkbox" /> Got a flat tire biking</li>
+        <li class="question"><input type="checkbox" /> Changed a class to pass/fail after the midterm</li>
+        <li class="question"><input type="checkbox" /> Lost your AggieCard</li>
+        <li class="question"><input type="checkbox" /> Had your major advisor give bad advice</li>
+        <li class="question"><input type="checkbox" /> Joined a class discord server</li>
+        <li class="question"><input type="checkbox" /> Tried to sneak a friend into the ARC</li>
+        <li class="question"><input type="checkbox" /> Had to sit on the floor during a lecture</li>
+        <li class="question"><input type="checkbox" /> Rode Unitrans double-decker bus</li>
+        <li class="question"><input type="checkbox" /> Rode a SPIN scooter on campus</li>
+        <li class="question"><input type="checkbox" /> Forgot your calculator for an exam</li>
+        <li class="question"><input type="checkbox" /> Pet Cheeto before</li>
+        <li class="question"><input type="checkbox" /> Got parking ticket on campus</li>
+        <li class="question"><input type="checkbox" /> Seen Turkeys walking on campus</li>
+        <li class="question"><input type="checkbox" /> Attended lecture while drunk or high</li>
+        <li class="question"><input type="checkbox" /> Got lost trying to find your classroom in Social Sciences</li>
+        <li class="question"><input type="checkbox" /> Fallen asleep in a lecture hall</li>
+        <li class="question"><input type="checkbox" /> Ate Shah's Halal Food</li>
+        <li class="question"><input type="checkbox" /> Scrolled Reels/Tiktok during a lecture</li>
+        <li class="question"><input type="checkbox" /> Slept in a hammock on campus</li>
+        <li class="question"><input type="checkbox" /> Went to a frat party</li>
+        <li class="question"><input type="checkbox" /> Eaten at In-N-Out after midnight</li>
+        <li class="question"><input type="checkbox" /> Ridden Amtrak to Sacramento or the Bay Area</li>
+        <li class="question"><input type="checkbox" /> Forgot to bring a scantron to an exam</li>
+        <li class="question"><input type="checkbox" /> Cried after/during a midterm or final</li>
+        <li class="question"><input type="checkbox" /> Missed your bus and had to bike instead</li>
+        <li class="question"><input type="checkbox" /> Regretted your DoorDash order after you finished eating</li>
+        <li class="question"><input type="checkbox" /> Played with therapy dogs during finals week</li>
+        <li class="question"><input type="checkbox" /> Created a perfect schedule on schedule builder only for the
+          classes to get full</li>
+        <li class="question"><input type="checkbox" /> Complained about something on YikYak</li>
+        <li class="question"><input type="checkbox" /> Gotten sunburned at a Picnic Day event</li>
+        <li class="question"><input type="checkbox" /> Blacked out at a party</li>
+        <li class="question"><input type="checkbox" /> Completed the lecture attendance iClicker/Quiz from home</li>
+        <li class="question"><input type="checkbox" /> Ate at the Dining Commons just for dessert</li>
+        <li class="question"><input type="checkbox" /> Lost your bike lock key</li>
+        <li class="question"><input type="checkbox" /> Asked someone where they're from and they say: "The Bay"</li>
+        <li class="question"><input type="checkbox" /> Got drenched from sprinklers on campus</li>
+        <li class="question"><input type="checkbox" /> Gotten your bike stolen</li>
+        <li class="question"><input type="checkbox" /> Took a nap in the Quad</li>
+        <li class="question"><input type="checkbox" /> Begged the professor to get off the waitlist for a class</li>
+        <li class="question"><input type="checkbox" /> Seen a raccoon or skunk on campus</li>
+        <li class="question"><input type="checkbox" /> Went to a UCDavis football game</li>
+        <li class="question"><input type="checkbox" /> Had class in a building that was way too hot or cold</li>
+        <li class="question"><input type="checkbox" /> Attended lecture for the last 5 minutes to get the iClicker</li>
+        <!-- 81 -->
+        <li class="question"><input type="checkbox" /> Been the only person in the group project to do work</li>
+        <li class="question"><input type="checkbox" /> Used ChatGPT to study</li>
+        <li class="question"><input type="checkbox" /> Gotten a milkshake from the Tecero, Segundo, or Latitude market
+        </li>
+        <li class="question"><input type="checkbox" /> Pulled an all-nighter during finals week</li>
+        <li class="question"><input type="checkbox" /> Got rejected from a club on campus</li>
+        <li class="question"><input type="checkbox" /> Accidentally went to the wrong class/lecture</li>
+        <li class="question"><input type="checkbox" /> Bought bluebooks and scantrons at the Bookstore</li>
+        <li class="question"><input type="checkbox" /> Had a class canceled</li>
+        <li class="question"><input type="checkbox" /> Asked a professor to round your grade</li>
+        <li class="question"><input type="checkbox" /> Had to stand on the Unitrans bus</li>
+        <li class="question"><input type="checkbox" /> Dropped a class after the first lecture</li>
+        <li class="question"><input type="checkbox" /> Bought UC Davis merch from the giftshop</li>
+        <li class="question"><input type="checkbox" /> Spent Aggie Cash too quickly</li>
+        <li class="question"><input type="checkbox" /> Joined a club and left after one meeting</li>
+        <li class="question"><input type="checkbox" /> Had a terrible schedule builder passtime</li>
+        <li class="question"><input type="checkbox" /> Spilled coffee on your notes before an exam</li>
+        <li class="question"><input type="checkbox" /> Went to a campus event only for the free merch</li>
+        <li class="question"><input type="checkbox" /> Looked at RateMyProfessor right after taking a midterm/final</li>
+        <li class="question"><input type="checkbox" /> Laughed during a silent lecture</li>
+        <li class="question"><input type="checkbox" /> Taken a gap quarter/year</li>
+
+
+      </ol>
+
+
+
+      <div id="result" style="display: none;">
+        <div id="userScoreBox" class="score-box"></div>
+        <div id="progressBarWrapper"></div>
+      
+        <div id="averageScoreBox" class="score-box" style="margin-top: 20px;"></div>
+      
+        <div id="userCount" class="user-count-text" style="margin-top: 10px;"></div>
+      </div>
+      
+      
+
+      <button type="button" id="submitBtn" class="submit-btn" onclick="calculatePurity()">Submit</button>
+
+      <img id="loadingImage" src="small_cow.png" style="display: none;" />
+      
+
+    <div class="result" id="result">
+      </li>
+
+      <div style="font-size: 13px; text-align: center; margin-bottom: 10px; color: #666;">
+        <strong>Disclaimer:</strong> This quiz is not affiliated with UC Davis in any way. It is intended purely for
+        entertainment purposes and is not meant to serve as a checklist or endorsement of behavior.
+      </div>
+
+      <div style="text-align:center; padding-top: 15px; font-size: 14px;">
+        <a href="https://github.com/ZainMGit" target="_blank">GitHub Page</a>
+      </div>
+
+
+      </li>
+
+      <script>
+        function calculatePurity() {
+          const total = document.querySelectorAll('input[type="checkbox"]').length;
+          const checked = document.querySelectorAll('input[type="checkbox"]:checked').length;
+          const score = 100 - Math.round((checked / total) * 100);
+      
+          // 🔥 Hide button permanently & show spinner
+          document.getElementById("submitBtn").style.display = "none";
+          document.getElementById("loadingImage").style.display = "block";
+      
+          fetch("https://davis-purity-test.onrender.com/submit-score", {
+
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ score })
+          })
+          .then(res => res.json())
+          .then(data => {
+            const avg = data.averageScore;
+            const totalUsers = data.totalUsers;
+      
+            // ✅ Hide spinner
+            document.getElementById("loadingImage").style.display = "none";
+      
+            // ✅ Show result block
+            document.getElementById("result").style.display = "block";
+      
+            // 🎯 Your Score Card + Bar
+            const userBox = document.getElementById("userScoreBox");
+            userBox.innerHTML = `
+              🎯 Your Aggie Purity Score: ${score}
+              <div class="progress-wrapper">
+                <div class="progress-bar-fill" style="width: ${score}%;"></div>
+              </div>
+            `;
+      
+            // 📊 Average Score Card + Bar
+            const avgBox = document.getElementById("averageScoreBox");
+            avgBox.innerHTML = `
+              📊 Average Score: ${avg}
+              <div class="progress-wrapper">
+                <div class="progress-bar-fill" style="width: ${avg}%;"></div>
+              </div>
+            `;
+      
+            // 👥 Submission Count
+            document.getElementById("userCount").textContent = `Based on ${totalUsers} submissions`;
+          })
+          .catch(err => {
+            console.error("❌ FETCH ERROR:", err);
+            document.getElementById("loadingImage").style.display = "none";
+          });
+        }
+      </script>
+      
+
+      
+      
+      
+      
+</div>
+
+
+
 </body>
+
 </html>
