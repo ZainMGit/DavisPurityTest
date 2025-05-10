@@ -256,6 +256,32 @@
           });
         }
       </script>
+      <script>
+ 
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("li.question").forEach((li, index) => {
+      const checkbox = li.querySelector("input[type='checkbox']");
+      const text = li.innerHTML.replace(checkbox.outerHTML, '').trim();
+
+      // Assign unique id
+      const id = `question-${index}`;
+      checkbox.id = id;
+
+      // Create label with 'for' attribute
+      const label = document.createElement('label');
+      label.setAttribute('for', id);
+      label.style.cursor = 'pointer'; // optional for hover styling
+      label.innerHTML = text;
+
+      // Clear and rebuild <li>
+      li.innerHTML = '';
+      li.appendChild(checkbox);
+      li.appendChild(label);
+    });
+  });
+</script>
+
+</script>
       
 
       
