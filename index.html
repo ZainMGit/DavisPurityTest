@@ -15,6 +15,7 @@
   crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="small_cow.png" type="image/x-icon">
 
   <!--Google tag-->
@@ -65,7 +66,7 @@
         <li class="question"><input type="checkbox" /> Biked without a helmet on campus</li>
         <li class="question"><input type="checkbox" /> Stayed overnight at Shields Library</li>
         <li class="question"><input type="checkbox" /> Swam in Putah Creek</li>
-        <li class="question"><input type="checkbox" /> Seen a cow give birth at the dairy barn</li>
+        <li class="question"><input type=`"checkbox" /> Seen a cow give birth at the dairy barn</li>
         <li class="question"><input type="checkbox" /> Pulled an all-nighter in the library</li>
         <li class="question"><input type="checkbox" /> Bought food from the Silo</li>
         <li class="question"><input type="checkbox" /> Got stuck behind a tractor on campus</li>
@@ -251,7 +252,7 @@
             document.getElementById("userCount").textContent = `Based on ${totalUsers} submissions`;
           })
           .catch(err => {
-            console.error("❌ FETCH ERROR:", err);
+            console.error(" FETCH ERROR:", err);
             document.getElementById("loadingImage").style.display = "none";
           });
         }
