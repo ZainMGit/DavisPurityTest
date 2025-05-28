@@ -195,7 +195,7 @@
       document.getElementById("submitBtn").style.display = "none";
       document.getElementById("loadingImage").style.display = "block";
 
-      fetch("https://davispuritytest.onrender.com", {
+      fetch("https://davispuritytest.onrender.com/submit-score", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ score })
