@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
@@ -9,60 +8,57 @@
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
   <meta name="description" content="Take the UC Davis-themed Rice Purity Test and see how many Aggie experiences you've had!" />
 
-
-  <!--Google AdSense Verification Script -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9777771799406691"
-  crossorigin="anonymous"></script>
+  <!-- Google AdSense Verification Script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9777771799406691" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="small_cow.png" type="image/x-icon">
 
-  <!--Google tag-->
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9M6BYLFVZC"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-9M6BYLFVZC');
   </script>
-
 </head>
 
 <body>
-
   <div class="animation_opener">
     <img src="small_cow.png"></img>
   </div>
 
   <script>
     setTimeout(() => {
-      document.body.style.overflow = 'auto'; // Enable scrolling
-      document.querySelector('.overlay').classList.add('fade-complete');
-    }, 1000); 
+      document.body.style.overflow = 'auto';
+      document.querySelector('.overlay')?.classList.add('fade-complete');
+    }, 1000);
   </script>
 
-<div class="wrapper">
-<div class = "header"><h1>Davis Purity Test</h1>
-  <div class="progress-container">
-    <div class="progress-bar" id="progressBar"></div>
-  </div></div>
+  <div class="wrapper">
+    <div class="header">
+      <h1>Davis Purity Test</h1>
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
 
-  <script>window.onscroll = function () {
-    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrollPercent = (scrollTop / scrollHeight) * 100;
-  
-    document.getElementById("progressBar").style.width = scrollPercent + "%";
-  };
-  </script>
-  <div class="container">
+    <script>
+      window.onscroll = function () {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = (scrollTop / scrollHeight) * 100;
+        document.getElementById("progressBar").style.width = scrollPercent + "%";
+      };
+    </script>
 
-    <form id="purityForm">
-      <ol type="1" style="list-style: decimal inside; padding-left: 0;">
-        <!-- Start Questions -->
-        <li class="question"><input type="checkbox" /> Taken a nap in the Arboretum</li>
+    <div class="container">
+      <form id="purityForm">
+        <ol type="1" style="list-style: decimal inside; padding-left: 0;">
+          <!-- Questions -->
+                  <li class="question"><input type="checkbox" /> Taken a nap in the Arboretum</li>
         <li class="question"><input type="checkbox" /> Biked without a helmet on campus</li>
         <li class="question"><input type="checkbox" /> Had trouble connecting to Eduroam</li>
         <li class="question"><input type="checkbox" /> Swam in Putah Creek</li>
@@ -167,132 +163,79 @@
         <li class="question"><input type="checkbox" /> Laughed during a silent lecture</li>
         <li class="question"><input type="checkbox" /> Taken a gap quarter/year</li>
 
+        </ol>
 
-      </ol>
+        <div id="result" style="display: none;">
+          <div id="userScoreBox" class="score-box"></div>
+          <div id="progressBarWrapper"></div>
+          <div id="averageScoreBox" class="score-box" style="margin-top: 20px;"></div>
+          <div id="userCount" class="user-count-text" style="margin-top: 10px;"></div>
+        </div>
 
+        <button type="button" id="submitBtn" class="submit-btn" onclick="calculatePurity()">Submit</button>
+        <img id="loadingImage" src="small_cow.png" style="display: none;" />
+      </form>
 
-
-      <div id="result" style="display: none;">
-        <div id="userScoreBox" class="score-box"></div>
-        <div id="progressBarWrapper"></div>
-      
-        <div id="averageScoreBox" class="score-box" style="margin-top: 20px;"></div>
-      
-        <div id="userCount" class="user-count-text" style="margin-top: 10px;"></div>
-      </div>
-      
-      
-
-      <button type="button" id="submitBtn" class="submit-btn" onclick="calculatePurity()">Submit</button>
-
-      <img id="loadingImage" src="small_cow.png" style="display: none;" />
-      
-
-    <div class="result" id="result">
-      </li>
-
-      <div style="font-size: 13px; text-align: center; margin-bottom: 10px; color: #666;">
-        <strong>Disclaimer:</strong> This quiz is not affiliated with UC Davis in any way. It is intended purely for
-        entertainment purposes and is not meant to serve as a checklist or endorsement of behavior.
+      <div style="font-size: 13px; text-align: center; margin-top: 20px; color: #666;">
+        <strong>Disclaimer:</strong> This quiz is not affiliated with UC Davis in any way. It is intended purely for entertainment purposes and is not meant to serve as a checklist or endorsement of behavior.
       </div>
 
       <div style="text-align:center; padding-top: 15px; font-size: 14px;">
         <a href="https://github.com/ZainMGit/DavisPurityTest/tree/main" target="_blank">GitHub Page</a>
       </div>
+    </div>
+  </div>
 
+  <script>
+    function calculatePurity() {
+      const total = document.querySelectorAll('input[type="checkbox"]').length;
+      const checked = document.querySelectorAll('input[type="checkbox"]:checked').length;
+      const score = 100 - Math.round((checked / total) * 100);
 
-      </li>
+      document.getElementById("submitBtn").style.display = "none";
+      document.getElementById("loadingImage").style.display = "block";
 
-      <script>
-        function calculatePurity() {
-          const total = document.querySelectorAll('input[type="checkbox"]').length;
-          const checked = document.querySelectorAll('input[type="checkbox"]:checked').length;
-          const score = 100 - Math.round((checked / total) * 100);
-      
-          // 🔥 Hide button permanently & show spinner
-          document.getElementById("submitBtn").style.display = "none";
-          document.getElementById("loadingImage").style.display = "block";
-      
-          fetch("https://davispuritytest-backend.onrender.com/submit-score", {
+      fetch("https://davispuritytest.onrender.com", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ score })
+      })
+        .then(res => res.json())
+        .then(data => {
+          const avg = data.averageScore;
+          const totalUsers = data.totalUsers;
 
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ score })
-          })
-          .then(res => res.json())
-          .then(data => {
-            const avg = data.averageScore;
-            const totalUsers = data.totalUsers;
-      
-            // ✅ Hide spinner
-            document.getElementById("loadingImage").style.display = "none";
-      
-            // ✅ Show result block
-            document.getElementById("result").style.display = "block";
-      
-            // 🎯 Your Score Card + Bar
-            const userBox = document.getElementById("userScoreBox");
-            userBox.innerHTML = `
-              🎯 Your Aggie Purity Score: ${score}
-              <div class="progress-wrapper">
-                <div class="progress-bar-fill" style="width: ${score}%;"></div>
-              </div>
-            `;
-      
-            // 📊 Average Score Card + Bar
-            const avgBox = document.getElementById("averageScoreBox");
-            avgBox.innerHTML = `
-              📊 Average Score: ${avg}
-              <div class="progress-wrapper">
-                <div class="progress-bar-fill" style="width: ${avg}%;"></div>
-              </div>
-            `;
-      
-            // 👥 Submission Count
-            document.getElementById("userCount").textContent = `Based on ${totalUsers} submissions`;
-          })
-          .catch(err => {
-            console.error(" FETCH ERROR:", err);
-            document.getElementById("loadingImage").style.display = "none";
-          });
-        }
-      </script>
-      <script>
- 
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("li.question").forEach((li, index) => {
-      const checkbox = li.querySelector("input[type='checkbox']");
-      const text = li.innerHTML.replace(checkbox.outerHTML, '').trim();
+          document.getElementById("loadingImage").style.display = "none";
+          document.getElementById("result").style.display = "block";
 
-      // Assign unique id
-      const id = `question-${index}`;
-      checkbox.id = id;
+          document.getElementById("userScoreBox").innerHTML = `🎯 Your Aggie Purity Score: ${score}<div class="progress-wrapper"><div class="progress-bar-fill" style="width: ${score}%;"></div></div>`;
 
-      // Create label with 'for' attribute
-      const label = document.createElement('label');
-      label.setAttribute('for', id);
-      label.style.cursor = 'pointer'; // optional for hover styling
-      label.innerHTML = text;
+          document.getElementById("averageScoreBox").innerHTML = `📊 Average Score: ${avg}<div class="progress-wrapper"><div class="progress-bar-fill" style="width: ${avg}%;"></div></div>`;
 
-      // Clear and rebuild <li>
-      li.innerHTML = '';
-      li.appendChild(checkbox);
-      li.appendChild(label);
+          document.getElementById("userCount").textContent = `Based on ${totalUsers} submissions`;
+        })
+        .catch(err => {
+          console.error("FETCH ERROR:", err);
+          document.getElementById("loadingImage").style.display = "none";
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("li.question").forEach((li, index) => {
+        const checkbox = li.querySelector("input[type='checkbox']");
+        const text = li.innerHTML.replace(checkbox.outerHTML, '').trim();
+        const id = `question-${index}`;
+        checkbox.id = id;
+        const label = document.createElement('label');
+        label.setAttribute('for', id);
+        label.style.cursor = 'pointer';
+        label.innerHTML = text;
+        li.innerHTML = '';
+        li.appendChild(checkbox);
+        li.appendChild(label);
+      });
     });
-  });
-</script>
-
-</script>
-      
-
-      
-      
-      
-      
-</div>
-
-
-
+  </script>
 </body>
 
 </html>
