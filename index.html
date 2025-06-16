@@ -236,6 +236,11 @@
       });
     });
   </script>
+  <!-- Keep-alive ping to Render backend -->
+  <script>
+    fetch("https://davispuritytest.onrender.com/ping")
+      .catch((err) => console.error("Keep-alive ping failed:", err));
+  </script>
 </body>
 
 </html>
